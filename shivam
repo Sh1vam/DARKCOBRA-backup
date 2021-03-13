@@ -1,4 +1,7 @@
 FROM kalilinux/kali-rolling
+RUN mkdir /app
+RUN chmod 777 /app
+WORKDIR /app
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt upgrade -y && apt-get install sudo -y && apt-get install apt-utils -y
 RUN touch ~/.hushlogin
