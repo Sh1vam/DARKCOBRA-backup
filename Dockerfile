@@ -8,6 +8,8 @@ RUN touch ~/.hushlogin
 RUN apt-get install -y\
     bash \
     figlet \
+    pv \
+    jq \
     git \
     neofetch \
     postgresql \
