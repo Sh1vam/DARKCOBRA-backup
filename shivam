@@ -20,5 +20,5 @@ RUN apt-get install -y\
     axel \
 
 
-RUN wget https://raw.githubusercontent.com/Sh1vam/DARKCOBRA-backup/master/sh1vamrun.py
+CMD ["bash", "wget https://raw.githubusercontent.com/Sh1vam/DARKCOBRA-backup/master/sh1vamrun.py"]
 CMD ["python3","sh1vamrun.py"]
