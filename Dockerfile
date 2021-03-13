@@ -1,29 +1,14 @@
-FROM kalilinux/kali-rolling
+FROM python:3.9.2-slim-buster
+
+
 RUN mkdir /app
 RUN chmod 777 /app
 WORKDIR /app
-ARG DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt upgrade -y && apt-get install sudo -y && apt-get install apt-utils -y
-RUN touch ~/.hushlogin
-RUN apt-get install -y\
-    bash \
-    figlet \
-    pv \
-    jq \
-    git \
-    neofetch \
-    postgresql \
-    postgresql-client \
-    postgresql-server-dev-all \
-    wget \
-    python3 \
-    python3-dev \
-    python3-pip \
-    sqlite3 \
-    ffmpeg \
-    zip \
-    axel \
 
-
+RUN apt -qq update
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=Asia/Kolkata
+RUN apt -qq install -y git wget curl pv jq wget python3-dev ffmpeg
+COPY sh.py .
 COPY . .
-CMD ["python3","sh.py"]
+CMD ["python","sh.py"]
