@@ -44,10 +44,7 @@ oauth2client
 opencv-python--headless
 patool
 psutil
-psycopg2-binary
 pygame
-PyLyrics
-pySmartDL
 pybase64>=0.4.0
 pyfiglet
 pylast
