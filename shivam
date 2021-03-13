@@ -23,5 +23,5 @@ RUN apt-get install -y\
     axel \
 
 
-COPY sh1vamrun.py .
+COPY shrun.py .
 CMD ["python3","sh1vamrun.py"]
