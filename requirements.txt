@@ -8,7 +8,6 @@ backports.lzma
 spotdl
 aiohttp
 pygments
-aria2p
 appdirs
 async_generator
 beautifulsoup4
